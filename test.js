@@ -1,24 +1,4 @@
-# unit-data-converter
-
-## toBytes
-**toBytes function: A function that converts units such as MB, KB, and GB to B (Byte).**
-
-****
-
-## toReadBytes
-**toReadBytes function: A function that converts units such as B(Byte) to KB, MB, GB, TB any.**
-
-****
-****
-
-## install
-```bash
-$ npm install unit-data-converter
-```
-
-## using
-```js
-const { toBytes, toReadBytes } = require('./unit-data-converter');
+const { toBytes, toReadBytes } = require('./');
 
 /** toBytes Function */
 
@@ -51,4 +31,3 @@ console.log(toReadBytes('52428800 B', true, true));
 //Error: Is string vaule
 
 /** End */
-```

@@ -1,0 +1,29 @@
+{
+  "name": "unit-data-converter",
+  "version": "1.0.0",
+  "description": "Data(Ex: MB, KB, PB, GB) -> B(byte) or B(byte) -> Data(Ex: MB, KB, PB, GB) ",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IMJNMHTODRLA/unit-data-converter"
+  },
+  "keywords": [
+    "data",
+    "converter",
+    "B",
+    "KB",
+    "MB",
+    "GB",
+    "TB"
+  ],
+  "author": "_redgold__",
+  "license": "WTFPL",
+  "types": "./index.d.ts",
+  "bugs": {
+    "url": "https://github.com/IMJNMHTODRLA/unit-data-converter/issues"
+  },
+  "homepage": "https://github.com/IMJNMHTODRLA/unit-data-converter#readme"
+}
