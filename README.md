@@ -18,7 +18,7 @@ $ npm install unit-data-converter
 
 ## using
 ```js
-const { toBytes, toReadBytes } = require('./unit-data-converter');
+const { toBytes, toReadBytes } = require('unit-data-converter');
 
 /** toBytes Function */
 

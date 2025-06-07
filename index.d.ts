@@ -4,5 +4,4 @@ declare function toReadBytes(size: string, Separator: boolean, IsNumber: boolean
 declare namespace toBytes{}
 declare namespace toReadBytes{}
 
-export = toBytes;
-export = toReadBytes;
+export { toBytes, toReadBytes };
