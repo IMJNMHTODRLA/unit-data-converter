@@ -69,7 +69,19 @@ function toReadBytes(size, Separator, IsNumber) { //B -> KB or MB, GB, TB ...
     }
     
 }
+function toSetUnit(size, Separator, IsNumber, unit) {
+    let sizeUnitVal = 0;
+
+    while (true) {
+        sizeUnitVal += 1;
+        if (condition) {
+            
+        }
+    }
+
+}
 module.exports = {
     toBytes,
-    toReadBytes
+    toReadBytes,
+    toSetUnit
 }
