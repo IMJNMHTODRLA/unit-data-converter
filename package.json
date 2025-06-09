@@ -1,16 +1,19 @@
 {
   "name": "unit-data-converter",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Data(Ex: MB, KB, PB, GB) -> B(byte) or B(byte) -> Data(Ex: MB, KB, PB, GB) ",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "test1": "node test1.js",
+    "test2": "node test2.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IMJNMHTODRLA/unit-data-converter"
   },
   "keywords": [
+    "unit",
     "data",
     "converter",
     "B",
