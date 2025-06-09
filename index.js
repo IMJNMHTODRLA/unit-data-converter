@@ -7,7 +7,7 @@ function toBytes(size, Separator, IsNumber) {
     for (let i = unit.length; 0 < i; i--) {
         if (size.endsWith(unit[i])) {
             size = size.replace(unit[i], "").trim() // MB -> ""
-            size = parseInt(size)
+            size = parseFloat(size)
 
             ConBytes = size * (1024 ** i) //size = 5 MB, 5 * (1024 ** 2)
 
@@ -22,7 +22,7 @@ function toBytes(size, Separator, IsNumber) {
                 return ConBytes + " B"
             }
             if (IsNumber == true) {
-                return parseInt(ConBytes)
+                return parseFloat(ConBytes)
             }
 
             return ConBytes.toString()
@@ -37,7 +37,7 @@ function toReadBytes(size, Separator, IsNumber) { //B -> KB or MB, GB, TB ...
     }
 
     size = size.replace("B", "").trim()
-    size = parseInt(size)
+    size = parseFloat(size)
 
     let unitVal = 0; //1: KB, 2: MB
 
@@ -62,14 +62,54 @@ function toReadBytes(size, Separator, IsNumber) { //B -> KB or MB, GB, TB ...
         }
 
         if (IsNumber == true) {
-            return parseInt(size)
+            return parseFloat(size)
         }
 
         return size.toString()
     }
     
 }
+function toSetUnit(size, Separator, IsNumber, units) { // unit = MB
+
+    for (let i = unit.length; 0 < i; i--) {
+        if (size.endsWith(unit[i])) {
+            size = size.replace(unit[i], "").trim() // MB -> ""
+            size = parseFloat(size)
+
+            while (true) {
+                if (i >= 10) {
+                    return "Error due to excessive units"
+                }
+
+                if (isNaN(size)) {
+                    return "Is NaN"
+                }
+
+                if (unit[i] == units.trim()) {
+                    if (Separator == true) {
+                        if (IsNumber == true) {
+                            return "Is string value"
+                        }
+                        
+                        return size + " " + unit[i]
+                    }
+
+                    if (IsNumber == true) {
+                        return parseFloat(size)
+                    }
+            
+                    return size.toString()
+                }
+
+                size = size / 1024
+                i += 1;
+            }
+        }
+    }
+
+}
 module.exports = {
     toBytes,
-    toReadBytes
+    toReadBytes,
+    toSetUnit
 }

@@ -1,12 +1,12 @@
 # unit-data-converter
-
-## toBytes
-**toBytes function: A function that converts units such as MB, KB, and GB to B (Byte).**
+# Version 1.1.0
 
 ****
+****
 
-## toReadBytes
-**toReadBytes function: A function that converts units such as B(Byte) to KB, MB, GB, TB any.**
+## Update
+
+**add toSetUnit, Int val -> Float val(ex: 50 -> 50.00002142)**
 
 ****
 ****
@@ -16,39 +16,74 @@
 $ npm install unit-data-converter
 ```
 
-## using
+## using:
+
+****
+
+### toBytes
+
 ```js
-const { toBytes, toReadBytes } = require('unit-data-converter');
+const { toBytes } = require('./');
 
-/** toBytes Function */
+console.log(toBytes('5.1GB', false, true));
+//5,476,083,302.4(int)
 
-console.log(toBytes('5GB', false, true));
-//5,368,709,120(int)
+console.log(toBytes('5.1GB', true, false));
+//5,476,083,302.4 B(string)
 
-console.log(toBytes('5GB', true, false));
-//5,368,709,120 B(string)
+console.log(toBytes('5.1GB', false, false));
+//5,476,083,302.4(string)
 
-console.log(toBytes('50MB', false, false));
-//5,368,709,120(string)
-
-console.log(toBytes('50MB', true, true));
+console.log(toBytes('5.1GB', true, true));
 //Error: Is string vaule
+```
 
-/** End */
+****
+
+### toReadBytes
+
+```js
+const { toReadBytes } = require('./');
 
 /** toReadBytes */
 
-console.log(toReadBytes('52428800 B', false, true));
-//50(int)
+console.log(toReadBytes('52428811 B', false, true));
+//50.00001049041748(int)
 
-console.log(toReadBytes('52428800 B', true, false));
-//50 MB(string)
+console.log(toReadBytes('52428811 B', true, false));
+//50.00001049041748 MB(string)
 
-console.log(toReadBytes('52428800 B', false, false));
-//50(string)
+console.log(toReadBytes('52428811 B', false, false));
+//50.00001049041748(string)
 
-console.log(toReadBytes('52428800 B', true, true));
+console.log(toReadBytes('52428811 B', true, true));
 //Error: Is string vaule
 
 /** End */
 ```
+
+****
+
+### toReadBytes
+
+```js
+const { toSetUnit } = require('./');
+
+/** toSetUnit */
+
+console.log(toSetUnit('1100 MB', false, true, "GB"));
+//1.07421875(int))
+
+console.log(toSetUnit('1100 MB', true, false, "GB"));
+//1.07421875 GB(string)
+
+console.log(toSetUnit('1100 MB', false, false, "GB"));
+//1.07421875(string)
+
+console.log(toSetUnit('1100 MB', true, true, "GB"));
+//Error: Is string vaule
+
+/** End */
+```
+
+****
