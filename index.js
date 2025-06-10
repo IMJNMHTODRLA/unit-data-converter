@@ -106,7 +106,7 @@ function toSetUnit(size, Separator, IsNumber, units) { // unit = MB
             }
         }
     }
-
+    return "Unknown unit"
 }
 module.exports = {
     toBytes,

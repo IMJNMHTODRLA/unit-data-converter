@@ -1,12 +1,12 @@
 # unit-data-converter
-# Version 1.1.0
+# Version 1.1.1
 
 ****
 ****
 
 ## Update
 
-**add toSetUnit, Int val -> Float val(ex: 50 -> 50.00002142)**
+**Bug patch**
 
 ****
 ****
