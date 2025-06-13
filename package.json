@@ -1,7 +1,7 @@
 {
   "name": "unit-data-converter",
-  "version": "1.1.1",
-  "description": "Data(Ex: MB, KB, PB, GB) -> B(byte) or B(byte) -> Data(Ex: MB, KB, PB, GB) ",
+  "version": "1.1.2",
+  "description": "Data(Ex: MB, KB, PB, GB) -> B(byte) or B(byte) -> Data(Ex: MB, KB, PB, GB) etc.",
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
