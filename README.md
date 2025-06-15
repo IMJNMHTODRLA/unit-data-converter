@@ -1,12 +1,13 @@
 # unit-data-converter
-# Version 1.1.1
+# Version 1.2.0
 
 ****
 ****
 
 ## Update
 
-**Bug patch**
+- Fixed bugs
+- Added `DecimalToBinary` and `BinaryToDecimal` functions
 
 ****
 ****
@@ -87,3 +88,49 @@ console.log(toSetUnit('1100 MB', true, true, "GB"));
 ```
 
 ****
+
+### DecimalToBinary
+
+```js
+const { DecimalToBinary } = require('..');
+
+/** DecimalToBinary Function */
+
+console.log(DecimalToBinary('1GB', false, true, "GB"));
+//0.9313225746154785(int)
+
+console.log(DecimalToBinary('1GB', true, false, "GB"));
+//0.9313225746154785 GB(string)
+
+console.log(DecimalToBinary('1GB', false, false, "GB"));
+//0.9313225746154785(string)
+
+console.log(DecimalToBinary('1GB', true, true, "GB"));
+//Error: Is string vaule
+
+/** End */
+```
+
+****
+
+### BinaryToDecimal
+
+```js
+const { BinaryToDecimal } = require('..');
+
+/** DecimalToBinary Function */
+
+console.log(BinaryToDecimal('0.9313225746154785GB', false, true, "GB"));
+//1(int)
+
+console.log(BinaryToDecimal('0.9313225746154785GB', true, false, "GB"));
+//1 GB(string)
+
+console.log(BinaryToDecimal('0.9313225746154785GB', false, false, "GB"));
+//1(string)
+
+console.log(BinaryToDecimal('0.9313225746154785GB', true, true, "GB"));
+//Error: Is string vaule
+
+/** End */
+```

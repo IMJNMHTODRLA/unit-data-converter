@@ -1,12 +1,15 @@
 {
   "name": "unit-data-converter",
-  "version": "1.1.1",
-  "description": "Data(Ex: MB, KB, PB, GB) -> B(byte) or B(byte) -> Data(Ex: MB, KB, PB, GB) ",
+  "version": "1.2.0",
+  "description": "Data(Ex: MB, KB, PB, GB) -> B(byte) or B(byte) -> Data(Ex: MB, KB, PB, GB) etc.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
-    "test": "node test.js",
-    "test1": "node test1.js",
-    "test2": "node test2.js"
+    "test": "node test/test.js",
+    "test1": "node test/test1.js",
+    "test2": "node test/test2.js",
+    "test3": "node test/test3.js",
+    "test4": "node test/test4.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +27,6 @@
   ],
   "author": "_redgold__",
   "license": "WTFPL",
-  "types": "./index.d.ts",
   "bugs": {
     "url": "https://github.com/IMJNMHTODRLA/unit-data-converter/issues"
   },
